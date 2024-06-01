@@ -1,1 +1,2 @@
 那个server_mhy.js是后端代码，运行直接nodemon server_mhy.js，记得下载nodejs工具最好是稳定版的
+还要记得改请求的url，改成本地客户端加端口号吧
