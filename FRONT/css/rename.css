@@ -1,0 +1,87 @@
+.rename-window {
+    display: none;
+    position: fixed;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom, #11192c, #212540);
+    width: 35vw;
+    height: 50vh;;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    /* 设置窗口的z-index值为2，比遮罩大 */
+  }
+
+  .rename-window .content {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rename-window .title-container {
+    margin: 20px 0;
+    width: 80%;
+  
+  }
+  
+  .rename-window .rename-title {
+    display: block;
+    float: left;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  .rename-window #currentName {
+    display: block;
+    float: left;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  
+  .rename-window .input-field {
+    margin: 20px 0;
+    width: 80%;
+  }
+  
+  .rename-window .input-field label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .rename-window .input-field input {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+    caret-color: #fff;
+    color: #fff;
+  }
+  
+  .rename-window .btn-container {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .rename-window .btn-container button {
+    background-color: #2a2f55;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5vh 5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AICG LAB</title>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/rename.css">
+  <link rel="stylesheet" href="../css/mymodelfiles.css">
+  <link rel="stylesheet" href="../css/upload.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="../css/conversion.css">
+  <link rel="stylesheet" href="../css/download.css">
+  <link rel="shortcut icon" href="../image/logo.png_32x32.ico" type="image/x-icon">
+</head>
+<body>
+<div class="gray" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.5);display: none;z-index: 1;"></div>
+
+</div>
+
+<div class="background">
+
+  <header>
+    <div class="logo">
+      <img src="../image/logo.png" alt="AICG LAB Logo">
+    </div>
+    <div class="login-btn">
+      <button id="start">
+        <i class="fas fa-user"><img src="../image/avatar.png" alt=""></i> Start
+      </button>
+    </div>
+  </header>
+
+  <section class="main-section">
+    <h1>Generate your own AI<br>3D models!</h1>
+  </section>
+
+  <!-- login -->
+  <div class="login-window">
+    <img class="close-btn close-img" src="../image/close.png" alt="Close">
+    <div class="content">
+      <h2 class="login-title">Login</h2>
+      <div class="input-field">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="input-field">
+        <label for="password">Your Password</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="btn-container">
+        <button onclick="handlelogin()">Sign in</button>
+        <button>Sign up</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- signup -->
+  <div class="register-window">
+    <img class="close-btn close-img" src="../image/close.png" alt="Close">
+    <div class="content">
+      <h2 class="login-title">Register</h2>
+      <div class="input-field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="input-field">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="input-field">
+        <label for="password">Your Password</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="btn-container">
+        <button onclick="handlesignup()">Sign Up</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- rename -->
+  <div class="rename-window">
+    <img class="close-btn close-img" src="../image/close.png" alt="Close">
+    <div class="content">
+      <div class="title-container">
+        <h2 class="rename-title">Current name:</h2>
+        <h2 id="currentName">AICG</h2>
+      </div>
+      <div class="input-field">
+        <label for="newName">Rename</label>
+        <input type="text" id="newName" name="newName">
+      </div>
+      <div class="btn-container">
+        <button class="saveBtn">Save</button>
+        <button class="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+<!-- upload -->
+<div class="upload-window">
+  <img class="close-btn close-img" src="../image/close.png" alt="Close">
+  <div class="title">
+    Upload
+    <img src="../image/question.png" alt="">
+  </div>
+  <diV class="content">
+
+    <div class="upload">
+      <label for="mp4-file" class="custom-file-input">
+        <div class="uploadImg">
+          <img src="../image/bigupload.png" alt="">
+        </div>
+        <div class="text">
+          <span class="button-text">click to upload a file</span>
+        </div>
+      </label>
+    </div>
+    <input type="file" id="mp4-file" accept="video/mp4" style="display: none;">
+    <div class="add">
+      *Only supports MP4 Format file
+    </div>
+  </diV>
+</div>
+
+ <!-- uploadProgress -->
+ <div class="uploadProgress-window">
+  <img class="close-btn close-img" src="../image/close.png" alt="Close">
+  <div class="title">
+    Uploading
+  </div>
+  <div class="content">
+    <div class="upload">
+      <div class="icon">
+        <img src="../image/播放.png" alt="">
+      </div>
+      <div class="uploadprogress">
+        <div id="progress-bar" style="background-color: aqua;"></div>
+      </div>
+    </div>
+    <div class="text"></div>
+  </div>
+</div>
+
+
+<div class="conversation-window1">
+  <h1 class="suc">Conversation.....</h1>
+  <div class="progress-bar-container1">
+    <div class="progress-bar1" style="width: 0%;"></div>
+  </div>
+
+</div>
+<!-- download -->
+<div class="download-window">
+  <img class="close-btn close-img" src="../image/close.png" alt="Close">
+  <diV class="content">
+    <div class="fileImg">
+
+    </div>
+    <div class="fileName">
+
+    </div>
+    <div class="text">
+      <img src="../image/downing.png" alt="Loading">
+      Loading...
+    </div>
+  </diV>
+</div>
+
+<!-- conversion successful-->
+<div class="conversion-successful-window">
+  <img class="close-btn close-img" src="../image/close.png" alt="Close">
+  <diV class="content">
+    <div class="successfulImg">
+      <img src="../image/ok.png" alt="">
+    </div>
+    <div class="text">
+      Conversion Successful!
+    </div>
+  </diV>
+</div>
+
+<!-- successful-home -->
+<div class="successful-window">
+  <diV class="content">
+    <div class="fileImg_preview">
+    </div>
+    <div class="fileName">
+      fileName
+    </div>
+  </diV>
+</div>
+
+
+  <footer>
+    <div class="button-container">
+      <button onclick="upload()">
+        <i class="fas fa-sync-alt"><img src="../image/upload.png" alt=""></i> Upload
+      <button onclick="generate()">
+        <i class="fas fa-comment"><img src="../image/start.png" alt=""></i> Start Conversation
+      </button >
+      <button onclick="download()">
+        <i class="fas fa-download"><img src="../image/download.png" alt=""></i> My model files
+      </button>
+    </div>
+    
+  </footer>
+
+</div>
+
+</body>
+
+<script src="../js/login.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/rename.js"></script>
+<script src="../js/signout.js"></script>
+<script src="../js/loginrequest.js"></script>
+<script src="../js/up_and_down.js"></script>
+
+</html>

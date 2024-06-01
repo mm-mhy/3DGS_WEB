@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+}
+.main-section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.main-section h1 {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 15vh;
+    height: 100px; /* 自定义高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    background-color: transparent;
+    border: 2px solid #fcfdfd;
+    border-radius: 50px;
+    color: #fcfdfd;
+    padding: 10px 20px;
+    margin: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+footer button i {
+    margin-right: 15px;
+   
+}
+
+footer button i img {
+    flex: none;
+    max-width: 30px;
+    max-height: 30px;
+}

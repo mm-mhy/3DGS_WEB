@@ -1,0 +1,132 @@
+/* add */
+body {
+  background-image: linear-gradient(to bottom, #0f172a, #1f233e);
+}
+
+/* body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45); 
+    z-index: 1; 
+} */
+.login-window {
+  display: none;
+  position: fixed;
+  color: #fff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to bottom, #11192c, #212540);
+  width: 35vw;
+  height: 50vh;;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  /* 设置窗口的z-index值为2，比遮罩大 */
+}
+.login-window .content {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.register-window {
+  display: none;
+  position: fixed;
+  color: #fff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to bottom, #11192c, #212540);
+  width: 35vw;
+  height: 50vh;;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  /* 设置窗口的z-index值为2，比遮罩大 */
+}
+.register-window .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-img {
+  width: 30px;
+  height: 30px;
+}
+
+.login-title {
+  font-size: 24px;
+  /* 缩小标题字体大小 */
+  margin-bottom: 30px;
+  text-align: center;
+  /* 居中标题文本 */
+}
+
+.input-field {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  display: block;
+  font-size: 18px;
+  /* 缩小标签字体大小 */
+  margin-bottom: 10px;
+  /* 减小标签与输入框之间的间距 */
+}
+
+.input-field input {
+  width: 95%;
+  background-color: transparent;
+  padding: 10px;
+  /* 增加输入框内边距 */
+  border: 3px solid #ccc;
+  border-radius: 3px;
+  caret-color: #fff;
+  color: #fff;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container button {
+  background-color: #2a2f55;
+  font-size: 20px;
+  margin-top: 20px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 5vw;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.invalid{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}

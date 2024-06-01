@@ -1,0 +1,205 @@
+.upload-window {
+    display: none;
+    position: fixed;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom, #11192c, #212540);
+    width: 40vw;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    /* 设置窗口的z-index值为2，比遮罩大 */
+}
+
+.upload-window .title {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.upload-window .title img {
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.upload-window .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.upload-window .uploadImg {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 20px;
+
+}
+
+.upload-window .uploadImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.upload-window .text {
+    font-size: 25px;
+
+}
+
+.upload-window #selectedFile {
+    font-size: 14px;
+}
+
+.upload-window button {
+    position: absolute;
+    bottom: 20px;
+    right: 30%;
+    background-color: #2a2f55;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5vh 5vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.upload-window .add {
+    position: absolute;
+    font-size: 14px;
+    bottom: 15px;
+    right: 25px;
+}
+
+
+.uploadProgress-window {
+    display: none;
+    position: fixed;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom, #11192c, #212540);
+    width: 35vw;
+    height: 40vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    /* 设置窗口的z-index值为2，比遮罩大 */
+}
+
+.uploadProgress-window .title {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.uploadProgress-window .title img {
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.uploadProgress-window .content {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadProgress-window .upload {
+    display: flex;
+    align-items: center;
+}
+
+
+.uploadProgress-window .upload img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 4px;
+}
+
+.uploadProgress-window .uploadprogress {
+    width: 30vw;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #fcfdfd;
+}
+
+.uploadProgress-window .uploadprogress .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #00bfff;
+    border-radius: 5px;
+
+}
+
+.uploadProgress-window .upload .icon {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* 新增的样式，添加底部边距 */
+}
+
+
+
+.uploadProgress-window .text {
+    font-size: 25px;
+    margin-top: 10px;
+    /* 修改的样式，添加顶部边距 */
+}
+
+.successful-window {
+    display: none;
+    position: fixed;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 35vw;
+    height: 40vh;
+    padding: 20px;
+    /* border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
+    z-index: 1;
+    /* 设置窗口的z-index值为2，比遮罩大 */
+}
+
+.successful-window .content {
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.successful-window .fileImg_preview {
+    border-radius: 10px;
+    width: 480px;
+    height: 300px;
+    margin-bottom: 30px;
+    /*background-image: url(../image/888.png);*/
+}
+.successful-window .fileImg_preview img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}

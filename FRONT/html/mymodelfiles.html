@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My model files</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <style>
+        /* 内联CSS样式 */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333131;
+            font-weight: bold;
+            color: #f2f2f2;
+        }
+        .edit-button {
+            text-align: center;
+            background-color: #3e404f;
+            color: white;
+            padding: 6px 12px;
+            
+            cursor: pointer;
+        }
+        .edit-button:hover {
+            background-color: #2c3161;
+        }
+        body {
+    background-image: linear-gradient(to bottom, #0f172a 0%, #222643 100%); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+    
+    font-family: Arial, sans-serif;
+    }
+    h1{
+        color: white;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 60px;
+        padding: 40px;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    table {
+        margin: auto;
+        margin-top: 150px;
+    }
+    .mymodelfiles_back {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../image/back.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+        
+    </style>
+  
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+          <img src="../image/logo.png" alt="AICG LAB Logo">
+        </div>
+      </header>
+
+      <div class="mymodelfiles_back">
+        <h1>My Model Files</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Discription</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>共享单车</td>
+                    <td>哈罗单车的点云图</td>
+                    <td class="edit-button">Edit</td>
+                </tr>
+                <tr>
+                    <td>巡逻车</td>
+                    <td>学校巡逻车的点云图</td>
+                    <td class="edit-button">Edit</td>
+                </tr>
+                <tr>
+                    <td>钟楼</td>
+                    <td>成都信息工程大学的点云图</td>
+                    <td class="edit-button">Edit</td>
+                </tr>
+            </tbody>
+        </table>
+
+      </div>
+
+<script src="../js/mymodelfiles.js"></script>
+</body>
+
+</html>
